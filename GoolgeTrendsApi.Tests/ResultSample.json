@@ -1,0 +1,403 @@
+{
+    "trends": {
+        "default": {
+            "timelineData": [{
+                "time": "1502755200",
+                "formattedTime": "2017年8月15日",
+                "formattedAxisTime": "8月15日",
+                "value": [95, 16, 2],
+                "formattedValue": ["95", "16", "2"]
+            }, {
+                "time": "1502841600",
+                "formattedTime": "2017年8月16日",
+                "formattedAxisTime": "8月16日",
+                "value": [87, 22, 2],
+                "formattedValue": ["87", "22", "2"]
+            }, {
+                "time": "1502928000",
+                "formattedTime": "2017年8月17日",
+                "formattedAxisTime": "8月17日",
+                "value": [91, 22, 1],
+                "formattedValue": ["91", "22", "1"]
+            }, {
+                "time": "1503014400",
+                "formattedTime": "2017年8月18日",
+                "formattedAxisTime": "8月18日",
+                "value": [91, 19, 1],
+                "formattedValue": ["91", "19", "1"]
+            }, {
+                "time": "1503100800",
+                "formattedTime": "2017年8月19日",
+                "formattedAxisTime": "8月19日",
+                "value": [92, 16, 1],
+                "formattedValue": ["92", "16", "1"]
+            }, {
+                "time": "1503187200",
+                "formattedTime": "2017年8月20日",
+                "formattedAxisTime": "8月20日",
+                "value": [79, 19, 1],
+                "formattedValue": ["79", "19", "1"]
+            }, {
+                "time": "1503273600",
+                "formattedTime": "2017年8月21日",
+                "formattedAxisTime": "8月21日",
+                "value": [87, 17, 1],
+                "formattedValue": ["87", "17", "1"]
+            }, {
+                "time": "1503360000",
+                "formattedTime": "2017年8月22日",
+                "formattedAxisTime": "8月22日",
+                "value": [87, 20, 1],
+                "formattedValue": ["87", "20", "1"]
+            }, {
+                "time": "1503446400",
+                "formattedTime": "2017年8月23日",
+                "formattedAxisTime": "8月23日",
+                "value": [91, 21, 1],
+                "formattedValue": ["91", "21", "1"]
+            }, {
+                "time": "1503532800",
+                "formattedTime": "2017年8月24日",
+                "formattedAxisTime": "8月24日",
+                "value": [90, 19, 1],
+                "formattedValue": ["90", "19", "1"]
+            }, {
+                "time": "1503619200",
+                "formattedTime": "2017年8月25日",
+                "formattedAxisTime": "8月25日",
+                "value": [90, 21, 2],
+                "formattedValue": ["90", "21", "2"]
+            }, {
+                "time": "1503705600",
+                "formattedTime": "2017年8月26日",
+                "formattedAxisTime": "8月26日",
+                "value": [80, 16, 1],
+                "formattedValue": ["80", "16", "1"]
+            }, {
+                "time": "1503792000",
+                "formattedTime": "2017年8月27日",
+                "formattedAxisTime": "8月27日",
+                "value": [81, 32, 1],
+                "formattedValue": ["81", "32", "1"]
+            }, {
+                "time": "1503878400",
+                "formattedTime": "2017年8月28日",
+                "formattedAxisTime": "8月28日",
+                "value": [90, 24, 1],
+                "formattedValue": ["90", "24", "1"]
+            }, {
+                "time": "1503964800",
+                "formattedTime": "2017年8月29日",
+                "formattedAxisTime": "8月29日",
+                "value": [86, 20, 1],
+                "formattedValue": ["86", "20", "1"]
+            }, {
+                "time": "1504051200",
+                "formattedTime": "2017年8月30日",
+                "formattedAxisTime": "8月30日",
+                "value": [92, 19, 2],
+                "formattedValue": ["92", "19", "2"]
+            }, {
+                "time": "1504137600",
+                "formattedTime": "2017年8月31日",
+                "formattedAxisTime": "8月31日",
+                "value": [93, 18, 2],
+                "formattedValue": ["93", "18", "2"]
+            }, {
+                "time": "1504224000",
+                "formattedTime": "2017年9月1日",
+                "formattedAxisTime": "9月1日",
+                "value": [93, 20, 1],
+                "formattedValue": ["93", "20", "1"]
+            }, {
+                "time": "1504310400",
+                "formattedTime": "2017年9月2日",
+                "formattedAxisTime": "9月2日",
+                "value": [83, 17, 2],
+                "formattedValue": ["83", "17", "2"]
+            }, {
+                "time": "1504396800",
+                "formattedTime": "2017年9月3日",
+                "formattedAxisTime": "9月3日",
+                "value": [89, 22, 2],
+                "formattedValue": ["89", "22", "2"]
+            }, {
+                "time": "1504483200",
+                "formattedTime": "2017年9月4日",
+                "formattedAxisTime": "9月4日",
+                "value": [100, 20, 2],
+                "formattedValue": ["100", "20", "2"]
+            }, {
+                "time": "1504569600",
+                "formattedTime": "2017年9月5日",
+                "formattedAxisTime": "9月5日",
+                "value": [94, 18, 1],
+                "formattedValue": ["94", "18", "1"]
+            }, {
+                "time": "1504656000",
+                "formattedTime": "2017年9月6日",
+                "formattedAxisTime": "9月6日",
+                "value": [87, 16, 2],
+                "formattedValue": ["87", "16", "2"]
+            }, {
+                "time": "1504742400",
+                "formattedTime": "2017年9月7日",
+                "formattedAxisTime": "9月7日",
+                "value": [89, 17, 1],
+                "formattedValue": ["89", "17", "1"]
+            }, {
+                "time": "1504828800",
+                "formattedTime": "2017年9月8日",
+                "formattedAxisTime": "9月8日",
+                "value": [89, 18, 1],
+                "formattedValue": ["89", "18", "1"]
+            }, {
+                "time": "1504915200",
+                "formattedTime": "2017年9月9日",
+                "formattedAxisTime": "9月9日",
+                "value": [79, 16, 1],
+                "formattedValue": ["79", "16", "1"]
+            }, {
+                "time": "1505001600",
+                "formattedTime": "2017年9月10日",
+                "formattedAxisTime": "9月10日",
+                "value": [83, 15, 1],
+                "formattedValue": ["83", "15", "1"]
+            }, {
+                "time": "1505088000",
+                "formattedTime": "2017年9月11日",
+                "formattedAxisTime": "9月11日",
+                "value": [88, 20, 1],
+                "formattedValue": ["88", "20", "1"]
+            }, {
+                "time": "1505174400",
+                "formattedTime": "2017年9月12日",
+                "formattedAxisTime": "9月12日",
+                "value": [87, 19, 1],
+                "formattedValue": ["87", "19", "1"]
+            }],
+            "averages": [88, 19, 1]
+        }
+    },
+    "geo": {
+        "default": {
+            "geoMapData": [{
+                "coordinates": {
+                    "lat": 39.904211,
+                    "lng": 116.407395
+                },
+                "geoName": "北京市",
+                "value": [100, 6, 0],
+                "formattedValue": ["100", "6", "0"],
+                "maxValueIndex": 0
+            }, {
+                "coordinates": {
+                    "lat": 31.230416,
+                    "lng": 121.473701
+                },
+                "geoName": "上海市",
+                "value": [18, 3, 0],
+                "formattedValue": ["18", "3", "0"],
+                "maxValueIndex": 0
+            }, {
+                "coordinates": {
+                    "lat": 22.543096,
+                    "lng": 114.057865
+                },
+                "geoName": "深圳市",
+                "value": [16, 3, 0],
+                "formattedValue": ["16", "3", "0"],
+                "maxValueIndex": 0
+            }, {
+                "coordinates": {
+                    "lat": 25.0689422,
+                    "lng": 121.5909027
+                },
+                "geoName": "内湖区",
+                "value": [4, 1, 0],
+                "formattedValue": ["4", "1", "0"],
+                "maxValueIndex": 0
+            }, {
+                "coordinates": {
+                    "lat": 25.0541591,
+                    "lng": 121.5638621
+                },
+                "geoName": "松山区",
+                "value": [4, 1, 0],
+                "formattedValue": ["4", "1", "0"],
+                "maxValueIndex": 0
+            }, {
+                "coordinates": {
+                    "lat": 25.0261583,
+                    "lng": 121.5427093
+                },
+                "geoName": "大安区",
+                "value": [3, 0, 0],
+                "formattedValue": ["3", "0", "0"],
+                "maxValueIndex": 0
+            }, {
+                "coordinates": {
+                    "lat": 24.9934099,
+                    "lng": 121.2969674
+                },
+                "geoName": "桃園區",
+                "value": [2, 0, 0],
+                "formattedValue": ["2", "0", "0"],
+                "maxValueIndex": 0
+            }, {
+                "coordinates": {
+                    "lat": 24.1573171,
+                    "lng": 120.6832556
+                },
+                "geoName": "北区",
+                "value": [2, 1, 0],
+                "formattedValue": ["2", "1", "0"],
+                "maxValueIndex": 0
+            }, {
+                "coordinates": {
+                    "lat": 22.6483444,
+                    "lng": 120.3262535
+                },
+                "geoName": "三民区",
+                "value": [2, 0, 0],
+                "formattedValue": ["2", "0", "0"],
+                "maxValueIndex": 0
+            }, {
+                "coordinates": {
+                    "lat": 24.1769764,
+                    "lng": 120.6424333
+                },
+                "geoName": "西屯区",
+                "value": [2, 1, 0],
+                "formattedValue": ["2", "1", "0"],
+                "maxValueIndex": 0
+            }, {
+                "coordinates": {
+                    "lat": 35.6940027,
+                    "lng": 139.7535951
+                },
+                "geoName": "千代田区",
+                "value": [1, 0, 0],
+                "formattedValue": ["1", "0", "0"],
+                "maxValueIndex": 0
+            }, {
+                "coordinates": {
+                    "lat": 1.3553794,
+                    "lng": 103.8677444
+                },
+                "geoName": "新加坡",
+                "value": [1, 0, 0],
+                "formattedValue": ["1", "0", "0"],
+                "maxValueIndex": 0
+            }, {
+                "coordinates": {
+                    "lat": 35.6580681,
+                    "lng": 139.7515992
+                },
+                "geoName": "港区",
+                "value": [1, 0, 0],
+                "formattedValue": ["1", "0", "0"],
+                "maxValueIndex": 0
+            }, {
+                "coordinates": {
+                    "lat": 35.4437078,
+                    "lng": 139.6380256
+                },
+                "geoName": "横滨市",
+                "value": [1, 0, 0],
+                "formattedValue": ["1", "0", "0"],
+                "maxValueIndex": 0
+            }, {
+                "coordinates": {
+                    "lat": 35.6938401,
+                    "lng": 139.7035494
+                },
+                "geoName": "新宿区",
+                "value": [1, 0, 0],
+                "formattedValue": ["1", "0", "0"],
+                "maxValueIndex": 0
+            }, {
+                "coordinates": {
+                    "lat": -36.8484597,
+                    "lng": 174.7633315
+                },
+                "geoName": "奥克兰",
+                "value": [1, 0, 0],
+                "formattedValue": ["1", "0", "0"],
+                "maxValueIndex": 0
+            }, {
+                "coordinates": {
+                    "lat": 35.1814464,
+                    "lng": 136.906398
+                },
+                "geoName": "名古屋市",
+                "value": [1, 0, 0],
+                "formattedValue": ["1", "0", "0"],
+                "maxValueIndex": 0
+            }, {
+                "coordinates": {
+                    "lat": 34.6937378,
+                    "lng": 135.5021651
+                },
+                "geoName": "大阪市",
+                "value": [0, 0, 0],
+                "formattedValue": ["0", "0", "0"],
+                "maxValueIndex": 0
+            }, {
+                "coordinates": {
+                    "lat": 43.653226,
+                    "lng": -79.3831843
+                },
+                "geoName": "多伦多",
+                "value": [0, 0, 0],
+                "formattedValue": ["0", "0", "0"],
+                "maxValueIndex": 0
+            }, {
+                "coordinates": {
+                    "lat": -33.8688197,
+                    "lng": 151.2092955
+                },
+                "geoName": "悉尼",
+                "value": [0, 0, 0],
+                "formattedValue": ["0", "0", "0"],
+                "maxValueIndex": 0
+            }, {
+                "coordinates": {
+                    "lat": -37.8136276,
+                    "lng": 144.9630576
+                },
+                "geoName": "墨尔本",
+                "value": [0, 0, 0],
+                "formattedValue": ["0", "0", "0"],
+                "maxValueIndex": 0
+            }, {
+                "coordinates": {
+                    "lat": 40.7127837,
+                    "lng": -74.0059413
+                },
+                "geoName": "纽约",
+                "value": [0, 0, 0],
+                "formattedValue": ["0", "0", "0"],
+                "maxValueIndex": 0
+            }, {
+                "coordinates": {
+                    "lat": 34.0522342,
+                    "lng": -118.2436849
+                },
+                "geoName": "洛杉矶",
+                "value": [0, 0, 0],
+                "formattedValue": ["0", "0", "0"],
+                "maxValueIndex": 0
+            }, {
+                "coordinates": {
+                    "lat": 51.5073509,
+                    "lng": -0.1277583
+                },
+                "geoName": "伦敦",
+                "value": [0, 0, 0],
+                "formattedValue": ["0", "0", "0"],
+                "maxValueIndex": 0
+            }]
+        }
+    }
+}

@@ -1,0 +1,305 @@
+﻿<html>
+
+<head>
+    <title>Google trends</title>
+    <meta charset="utf-8">
+    <style type="text/css">
+        #resultBox {
+            margin-top: 20px;
+        }
+
+        .map .lineChart {
+            width:800px;
+            height:500px;
+
+            margin-top:10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div>
+        <div>
+            <input id="keyword" value="北京" type="text" />
+        </div>
+        <input id="start" type="datetime" />
+        <input id="end" type="datetime" />
+
+        <button id="submitBtn" onclick="submit()">Go</button>
+        <button id="submitCombinedBtn" onclick="submitCombined()">Combined</button>
+    </div>
+
+    <div id="resultBox">
+        <div id="trendsLine" style="width: 800px;height:500px;"></div>
+        <div id="geoMap" style="width:1000px"></div>
+    </div>
+</body>
+</html>
+
+<script src="jquery-3.2.1.js"></script>
+
+<script src="echarts.min.js" charset="utf-8"></script>
+<script src="world.js"></script>
+<script>
+
+    function submit() {
+        var keyword = $("#keyword").val();
+        if (!keyword) {
+            $("#keyword").focus();
+            return;
+        }
+
+        $("#trendsLine").html("");
+        $("#geoMap").html("");
+
+        var btn = $("#submitBtn");
+        var text = btn.text();
+        btn.attr("disabled", true).text("working...");
+
+        var start = $("#start").val();
+        var end = $("#end").val();
+
+        var qs = `startdate=${start}&enddate=${end}&keys=${keyword}`
+
+        $.get("api/googletrends?" + qs, null, (data) => {
+
+            var keyArr = keyword.split(',');
+
+            showChart(keyArr, data.trends);
+            showMap(keyArr,data);
+
+            btn.removeAttr("disabled").text(text);
+        });
+    }
+
+    function submitCombined() {
+        var keyword = $("#keyword").val();
+        if (!keyword) {
+            $("#keyword").focus();
+            return;
+        }
+
+        $("#trendsLine").html("");
+        $("#geoMap").html("");
+
+        var btn = $("#submitCombinedBtn");
+        var text = btn.text();
+        btn.attr("disabled", true).text("working...");
+
+        var start = $("#start").val();
+        var end = $("#end").val();
+
+        var qs = `startdate=${start}&enddate=${end}&keys=${keyword}`
+
+        $.get("api/googletrends/combined?" + qs, null, (data) => {
+
+            var keyArr = keyword.split(',');
+
+            showChart(keyArr, data.trends);
+            showMap(keyArr, data);
+
+            btn.removeAttr("disabled").text(text);
+        });
+    }
+
+    function showChart(keyArr, data) {
+        
+        var timeLine = data.default.timelineData;
+        var xAxisData = [];
+
+        var series = [];
+        for (var i = 0; i < keyArr.length; i++) {
+            var k = keyArr[i];
+            var s = {
+                name: k,
+                type: 'line',
+                data: [],
+                markPoint: {
+                    data: [
+                        { type: 'max', name: '最大值' },
+                        { type: 'min', name: '最小值' }
+                    ]
+                },
+                markLine: {
+                    data: [
+                        { type: 'average', name: '平均值' }
+                    ]
+                }
+            };
+
+            series.push(s);
+        }
+
+        for (var i = 0; i < timeLine.length; i++) {
+            var cur = timeLine[i];
+
+            xAxisData.push(cur.formattedTime);
+
+            var values = cur.value;
+            for (var j = 0; j < values.length; j++) {
+                series[j].data.push(values[j]);
+            }
+        }
+
+        setLineChart(keyArr, xAxisData, series);
+    }
+
+    function setLineChart(keywords, xAxisData, series) {
+
+        var option = {
+            title: {
+                text: 'GoogleTrends',
+                subtext: ''
+            },
+            tooltip: {
+                trigger: 'axis'
+            },
+            legend: {
+                data: keywords
+            },
+            toolbox: {
+                show: true,
+                feature: {
+                    dataZoom: {
+                        yAxisIndex: 'none'
+                    },
+                    dataView: { readOnly: false },
+                    magicType: { type: ['line', 'bar'] },
+                    restore: {},
+                    saveAsImage: {}
+                }
+            },
+            xAxis: {
+                type: 'category',
+                boundaryGap: false,
+                data: xAxisData
+            },
+            yAxis: {
+                type: 'value',
+                axisLabel: {
+                    formatter: '{value}'
+                }
+            },
+            series: series
+        };
+
+        var container = ($(`<div class="lineChart" style="width:800px;height:500px;"></div>`).appendTo("#trendsLine"))[0];
+        var chart = echarts.init(container);
+        chart.setOption(option);
+    }
+
+    function showMap(keys, data) {
+        var geo = data.geo.default.geoMapData;
+
+        for (var kIndex = 0; kIndex < keys.length; kIndex++) {
+
+            var seriesData = [];
+            for (var i = 0; i < geo.length; i++) {
+                var cur = geo[i];
+
+                var s = {
+                    name: cur.geoName,
+                    value: [
+                        cur.coordinates.lng,
+                        cur.coordinates.lat,
+                        cur.value[kIndex]
+                    ],
+                    label: {
+                        emphasis: {
+                            position: 'right',
+                            show: true
+                        }
+                    },
+                    itemStyle: {
+                        normal: {
+                            color: '#de4c4f'
+                        }
+                    }
+                };
+
+                seriesData.push(s);
+            }
+
+            var id = "geoMap" + kIndex;
+            var container = ($(`<div id='${id}' class="map" style="width:800px;height:500px;"></div>`).appendTo("#geoMap"))[0];
+
+            setMapChart(keys[kIndex], seriesData, container);
+        }
+    }
+
+    function setMapChart(title, seriesData, container) {
+        var max = 100;
+        var min = 0;
+        
+        var option = {
+            backgroundColor: '#404a59',
+            title: {
+                text: title,
+                subtext: '',
+                left: 'center',
+                top: 'top',
+                textStyle: {
+                    color: '#fff'
+                }
+            },
+            tooltip: {
+                trigger: 'item',
+                formatter: function (params) {
+                    return params.name + '<br />' + params.value[2];
+                }
+            },
+            visualMap: {
+                show: false,
+                min: 0,
+                max: max,
+                inRange: {
+                    symbolSize: [6, 60]
+                }
+            },
+            geo: {
+                name: title,
+                type: 'map',
+                map: 'world',
+                roam: true,
+                label: {
+                    emphasis: {
+                        show: false
+                    }
+                },
+                itemStyle: {
+                    normal: {
+                        areaColor: '#323c48',
+                        borderColor: '#111'
+                    },
+                    emphasis: {
+                        areaColor: '#2a333d'
+                    }
+                }
+            },
+            series: [{
+                type: 'scatter',
+                coordinateSystem: 'geo',
+                data: seriesData
+            }]
+        };
+
+        var chart = echarts.init(container);
+        chart.setOption(option);
+    }
+
+    $(document).ready(() => {
+
+        var now = new Date();
+
+        var startDt = new Date();
+        startDt.setMonth(now.getMonth() - 1);
+        var start = `${startDt.getFullYear()}-${startDt.getMonth() + 1}-${startDt.getDate()}`;
+        $("#start").val(start);
+
+        var end = `${now.getFullYear()}-${now.getMonth() + 1}-${now.getDate()}`;
+        $("#end").val(end);
+    });
+
+</script>
+
